@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+$font-english: 'Lato', sans-serif;
+$font-japanese: 'Noto Sans JP', sans-serif;
+
+$main-color: #3F51B5;
+$main-accent: #E81919;
+$main-text: #333333;
+
+$layout-width-inner: 1280px;
+
+$breakpoints: (
+  'sp': "(max-width: 767px)", 
+  'tab': "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})", 
+  'pc': "(min-width: #{$layout-width-inner})"
+) !default;

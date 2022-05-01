@@ -1,0 +1,60 @@
+@use "../sass/common/setting" as *;
+@use "../sass/common/mixin" as *;
+
+body {
+    font-family: $font-japanese;
+    line-height: 1.5;
+}
+
+.inner {
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq('tab') {
+        padding: 0 24px;
+    }
+
+    @include mq('sp') {
+        padding: 0 16px;
+    }
+}
+
+.section {
+    padding: 88px 0 120px;
+    
+    @include mq('sp') {
+        padding: 50px 0 60px;
+    }
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 24px;
+    position: relative;
+    font-family: $font-english;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 60px;
+        background-color: $main-color;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include mq('sp') {
+            width: 42px;
+            height: 3px;
+        }
+    }
+
+    @include mq('sp') {
+        font-size: 26px;
+        padding-bottom: 18px;
+    }
+}

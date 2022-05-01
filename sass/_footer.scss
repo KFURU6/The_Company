@@ -1,0 +1,179 @@
+@use "../sass/common/setting" as *;
+@use "../sass/common/mixin" as *;
+
+// ----------footer----------
+.footer {
+    background: linear-gradient(to bottom, #666666, #333333);
+    padding: 60px 0 24px;
+    color: #fff;
+    
+    @include mq('sp') {
+        padding: 30px 0 14px;
+    }
+}
+
+.footer__content {
+    display: flex;
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.footer__left {
+    width: 36%;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.footer__logo {
+    a{
+
+    }
+    img {
+        width: 205px;
+    }
+}
+
+
+.footer__address,
+.footer__tel {
+    font-size: 14px;
+}
+
+.footer__address {
+    margin-top: 26px;
+    
+    @include mq('sp') {
+        margin-top: 13px;
+    }
+}
+
+.footer__tel {
+    margin-top: 10px;
+    
+    @include mq('sp') {
+        margin-top: 6px;
+    }
+}
+
+.footer__center {
+    width: 48%;
+
+    @include mq('sp') {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    font-family: $font-english;
+
+    li {
+        &:not(:first-child) {
+            margin-left: 40px;
+            
+            @include mq('sp') {
+                margin-left: 20px;
+            }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.footer__right {
+    width: 16%;
+
+    @include mq('sp') {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
+
+.footer__sns {
+    display: flex;
+    justify-content: flex-end;
+    
+    @include mq('sp') {
+        justify-content: center;
+    }
+
+    li {
+        &:not(:first-child) {
+            margin-left: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.footer__copy {
+    margin-top: 46px;
+    font-size: 14px;
+    text-align: center;
+    font-family: $font-english;
+
+    @include mq('sp') {
+        margin-top: 22px;
+    }
+}
+
+.to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease 0s;
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include mq('sp') {
+        right: 6px;
+        bottom: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        img {
+            width: 60px;
+
+            @include mq('sp') {
+                width: 40px;
+            }
+        }
+    }
+}

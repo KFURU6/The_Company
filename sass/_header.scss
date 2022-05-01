@@ -1,0 +1,79 @@
+@use "../sass/common/setting" as *;
+@use "../sass/common/mixin" as *;
+
+.header {
+    background-color: $main-color;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 3px rgba($color: #000000, $alpha: 0.16);
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    @include mq('sp') {
+        height: 60px;
+    }
+    
+    .header__inner {
+        display: flex;
+        align-items: center;
+        height: inherit;
+
+        .header__logo {
+            width: 205px;
+            margin-left: 40px;
+
+            img {
+                width: 100%;
+            }
+
+            @include mq('sp') {
+                width: 182px;
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        .header__nav {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            font-family: $font-english;
+
+            @include mq('sp') {
+                display: none;
+            }
+
+            li {
+                margin-right: 40px;
+                
+                a {
+                    color: #fff;
+                    position: relative;
+                    text-decoration: none;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -8px;
+                        width: 100%;
+                        height: 2px;
+                        background-color: transparent;
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    &:hover,
+                    &.is-active {
+                        &::after {
+                            background-color: $main-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
